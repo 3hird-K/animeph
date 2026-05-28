@@ -218,6 +218,15 @@ const GetAnimeDetailsQuery = graphql(`
           name
         }
       }
+      recommendations(sort: RATING_DESC, page: 1, perPage: 15) {
+        edges {
+          node {
+            mediaRecommendation {
+              ...AnimeCardFields
+            }
+          }
+        }
+      }
     }
   }
 `);
@@ -247,5 +256,5 @@ export const getUpcomingAnime = async (page = 1, perPage = 20) => {
 };
 
 export const getAnimeDetails = async (id: number) => {
-  return fetchAniList(GetAnimeDetailsQuery, { id });
+  return fetchAniList(GetAnimeDetailsQuery as any, { id });
 };
