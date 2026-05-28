@@ -133,7 +133,7 @@ export default function AnimeHero({ animeList }: AnimeHeroProps) {
 
       {/* Content Layer */}
       <div className="relative h-full w-full z-20">
-        <div className="mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-20 md:px-12 md:pb-36">
+        <div className="mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-20 pt-24 md:px-12 md:pb-28 md:pt-32">
           <div
             className={`transition-all duration-700 ease-in-out ${
               textFade ? "opacity-100 translate-y-0 filter blur-0" : "opacity-0 translate-y-3 filter blur-[3px]"
@@ -146,7 +146,7 @@ export default function AnimeHero({ animeList }: AnimeHeroProps) {
             </div>
 
             {/* Title */}
-            <h1 className="mb-3 text-5xl font-display uppercase tracking-wider leading-none text-white drop-shadow-2xl md:text-7xl lg:text-8xl max-w-3xl line-clamp-3">
+            <h1 className="mb-3 text-4xl font-display uppercase tracking-wider leading-none text-white drop-shadow-2xl md:text-5xl lg:text-6xl max-w-3xl line-clamp-3">
               {title}
             </h1>
 
